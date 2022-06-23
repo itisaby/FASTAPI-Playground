@@ -21,4 +21,5 @@ github:
 
 # This will make it so that on workspace start it will run a file called `app.py`
 tasks:
-  - command: python3 main.py
+  - init: pip install fastapi[all]
+  - command: uvicorn main:app --reload
